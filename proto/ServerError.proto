@@ -1,0 +1,21 @@
+package net.husky.protobuf;
+
+option optimize_for=SPEED;
+
+enum ReturnStatus
+{
+	STATUS_OK				=	0;
+	STATUS_FAIL				=	-100;
+	
+	
+	INVALID_REQUEST			=	-1;
+	
+	PLUGIN_NOT_FOUND		=	-51;
+	PLUGIN_ACTION_NOT_FOUND	=	-52;
+	PLUGIN_DATA_NOT_FOUND	=	-53;
+}
+
+message ServerErrorResponseData
+{
+	required ReturnStatus error = 1;
+}

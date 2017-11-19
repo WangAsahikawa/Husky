@@ -1,0 +1,32 @@
+package net.husky.protobuf;
+
+import "DataStructures.proto";
+
+option optimize_for=SPEED;
+
+message PluginRequestData{
+	required string name = 1;
+	required string action = 2;
+	repeated Property properties = 3;
+}
+
+message PluginResponseData{
+	required PluginData data=1;
+}
+
+message PluginNoticeData{
+	required PluginData data=1;
+}
+
+message PluginData{
+	required string name = 1;
+	required string action = 2;
+	repeated Attribute properties = 3;
+	optional int32 result = 4;
+}
+
+message Attribute{
+	required string name = 1;
+	optional string value = 2;
+	repeated Attribute attributes = 3;
+}

@@ -1,0 +1,21 @@
+package net.husky.protobuf;
+
+option optimize_for=SPEED;
+
+enum MessageHandler
+{
+	HttpGetRequest				=	18245;
+	HttpPostRequest				=	20559;
+	
+	
+	
+	PluginRequest				=	101;
+	PluginResponse				=	102;
+	pluginNotice				=	104;
+	
+	ServerErrorResponse			=	500;	
+	
+	
+	ModuleDemoRequest			=	601;
+	ModuleDemoResponse			=	602;
+}

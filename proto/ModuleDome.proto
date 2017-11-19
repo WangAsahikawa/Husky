@@ -1,0 +1,11 @@
+package net.husky.protobuf;
+
+option optimize_for=SPEED;
+
+message PluginRequestData{
+	required int32 data=1;
+}
+
+message PluginResponseData{
+	required int32 data=1;
+}

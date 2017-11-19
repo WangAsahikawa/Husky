@@ -1,0 +1,28 @@
+package net.husky.protobuf;
+
+option optimize_for=SPEED;
+
+message Property {
+	required string name = 1;
+	required string value = 2;
+}
+
+message Region {
+	required int32 id=1;
+	required string name=2;
+	repeated Property properties = 3;
+}
+
+message User {
+	required int32 id=1;
+	required string name=2;
+	repeated Property properties = 3;
+}
+
+message Room {
+	required int32 id=1;
+	required string name=2;
+	required int32 maxUsers = 3; 
+	required bool needPassword = 4; 
+	repeated Property properties = 5;
+}
